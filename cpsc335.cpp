@@ -108,15 +108,24 @@ int main() {
     
   }
 
-  //if it doesn't work then show warning, else output results
+  // Open the output file for writing
+  ofstream outputFile("output.txt");
+  if (!outputFile) {
+      cerr << "Failed to open the output file!" << endl;
+      return 1;
+  }
+
   if (availableTimes.empty()) {
-    cout << "No common available times found" << endl;
+    outputFile << "No common available times found" << endl;
   } else {
-    cout << "Common available times:" << endl;
+    outputFile << "Common available times:" << endl;
     for (int i = 0; i < availableTimes.size(); i++) {
-      cout << availableTimes[i] << endl;
+      outputFile << availableTimes[i] << endl;
     }
   }
+
+  // Close the output file
+  outputFile.close();
 
   return 0;
 }
