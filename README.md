@@ -29,8 +29,6 @@ Any help questions can be directed at either Isaac or Jason.
 * 0.1
     * Initial Release
 
-
-Inspiration, code snippets, etc.
 * [awesome-readme](https://github.com/matiassingers/awesome-readme)
 * [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 * [dbader](https://github.com/dbader/readme-template)
