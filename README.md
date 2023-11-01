@@ -13,10 +13,10 @@ This project's aim is to solve the "Matching Group Schedules" problem throuhg fi
 * Ensure C++ compiler is installed.
 * Compile the 'cpsc335.cpp' file
 ```
-g++ cpsc335.cpp -o cpsc335
+g++ cpsc335.cpp -o cpsc335.exe
 ```
 ```
-./cpsc335
+cpsc335.exe
 ```
 * Or use the provided 'cpsc335.exe' file.
 
