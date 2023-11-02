@@ -1,7 +1,7 @@
 # CPSC 335 Project 1
 
 ## Team Members
-* Isaac Perez () (https://github.com/Isaacdan333)
+* Isaac Perez (isaacdan@csu.fullerton.edu) (https://github.com/Isaacdan333)
 * Jason Lee (jason8452@csu.fullerton.edu) (https://github.com/jason8452)
 
 ## Project Description
