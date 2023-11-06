@@ -5,7 +5,7 @@
 * Jason Lee (jason8452@csu.fullerton.edu) (https://github.com/jason8452)
 
 ## Project Description
-This project's aim is to solve the "Matching Group Schedules" problem throuhg finding an availability time that is common for a meeting based on the provided schedules and activity periods.
+This project's aim is to solve the "Matching Group Schedules" problem through finding an availability time that is common for a meeting based on the provided schedules and activity periods.
 
 ## Executing Program
 
