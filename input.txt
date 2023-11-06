@@ -13,3 +13,136 @@ person2_DailyAct:
 9:00 18:30
 duration_of_meeting:
 30
+
+person1_Schedule:
+9:00 10:00
+14:00 15:00
+person1_DailyAct:
+8:00 18:00
+person2_Schedule:
+11:00 12:00
+15:30 16:30
+person2_DailyAct:
+9:30 17:30
+duration_of_meeting:
+60
+
+person1_Schedule:
+8:00 10:00
+13:00 14:00
+18:00 19:00
+person1_DailyAct:
+7:00 20:00
+person2_Schedule:
+10:30 11:30
+14:30 15:30
+17:30 18:30
+person2_DailyAct:
+9:00 19:00
+duration_of_meeting:
+45
+
+person1_Schedule:
+8:00 9:00
+10:30 12:00
+14:00 15:30
+person1_DailyAct:
+7:00 17:00
+person2_Schedule:
+9:30 11:00
+13:00 14:30
+16:00 17:30
+person2_DailyAct:
+8:00 18:00
+duration_of_meeting:
+15
+
+person1_Schedule:
+9:00 10:00
+11:30 13:00
+14:30 15:30
+person1_DailyAct:
+8:00 18:00
+person2_Schedule:
+10:30 11:30
+13:30 14:30
+16:00 17:00
+person2_DailyAct:
+9:00 18:00
+duration_of_meeting:
+20
+
+person1_Schedule:
+7:00 8:00
+9:30 10:30
+12:00 13:00
+person1_DailyAct:
+6:00 14:00
+person2_Schedule:
+9:30 10:30
+12:00 13:30
+15:00 16:30
+person2_DailyAct:
+8:00 17:00
+duration_of_meeting:
+45
+
+person1_Schedule:
+9:00 10:00
+11:30 12:30
+14:00 15:00
+person1_DailyAct:
+8:00 18:00
+person2_Schedule:
+8:30 9:30
+11:00 12:00
+13:30 14:30
+person2_DailyAct:
+7:00 17:00
+duration_of_meeting:
+25
+
+person1_Schedule:
+10:00 11:00
+12:30 13:30
+14:30 15:30
+person1_DailyAct:
+9:00 18:00
+person2_Schedule:
+11:30 12:30
+14:00 15:00
+16:30 17:30
+person2_DailyAct:
+10:00 19:00
+duration_of_meeting:
+30
+
+person1_Schedule:
+9:00 10:30
+11:30 13:00
+14:30 16:00
+person1_DailyAct:
+8:00 18:00
+person2_Schedule:
+10:00 11:30
+13:00 14:30
+15:30 17:00
+person2_DailyAct:
+9:00 19:00
+duration_of_meeting:
+20
+
+person1_Schedule:
+8:00 9:30
+10:30 12:00
+13:00 14:30
+person1_DailyAct:
+7:00 17:00
+person2_Schedule:
+8:30 10:00
+11:30 13:00
+14:00 15:30
+person2_DailyAct:
+8:00 18:00
+duration_of_meeting:
+15
