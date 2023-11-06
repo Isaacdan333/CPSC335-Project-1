@@ -31,25 +31,23 @@ vector<pair<int, int>> findAvailableTimes(vector<pair<int, int>> schedule, vecto
   vector<pair<int, int>> availableTimes;
   int lastEnd = dailyActivity[0];
   for (int i = 0; i < schedule.size(); i++) {
-    int start = schedule[i].first;
-    int end = schedule[i].second;
-    if (start - lastEnd >= duration) {
-      availableTimes.push_back(make_pair(lastEnd, start));
+    int start_time = schedule[i].first;
+    int endtime = schedule[i].second;
+    // if the difference in time between person's schedule is greater/equal to given meeting time
+    if (start_time - lastEnd >= duration) {
+      availableTimes.push_back(make_pair(lastEnd, start_time));
     }
-    lastEnd = max(lastEnd, end);
+    lastEnd = max(lastEnd, endtime);
   }
-  // if the difference in time between person's schedule is greater/equal to given meeting time 
   if (dailyActivity[1] - lastEnd >= duration) {
     availableTimes.push_back(make_pair(lastEnd, dailyActivity[1]));
   }
   return availableTimes;
 }
 // find common available times for both people
-vector<pair<int, int>> findCommonTimes(vector<pair<int, int>> schedule1,
-                                       vector<int> dailyActivity1,
-                                       vector<pair<int, int>> schedule2,
-                                       vector<int> dailyActivity2,
-                                       int duration) {
+vector<pair<int, int>> findCommonTimes(vector<pair<int, int>> schedule1, vector<int> dailyActivity1,
+                                       vector<pair<int, int>> schedule2, vector<int> dailyActivity2, int duration) 
+{
   //make vector for the 2 different schedules
   vector<pair<int, int>> availableTimes1 =
       findAvailableTimes(schedule1, dailyActivity1, duration);
@@ -58,20 +56,20 @@ vector<pair<int, int>> findCommonTimes(vector<pair<int, int>> schedule1,
   vector<pair<int, int>> commonTimes;
   //prepare a while loop with 2 counters for the common times available
   int i = 0, j = 0;
-  while (i < availableTimes1.size() && j < availableTimes2.size()) { // 7n + 15
+  while (i < availableTimes1.size() && j < availableTimes2.size()) { 
     int start1 = availableTimes1[i].first;
     int end1 = availableTimes1[i].second;
     int start2 = availableTimes2[j].first;
-    int end2 = availableTimes2[j].second; // 11n + 15
+    int end2 = availableTimes2[j].second; 
     if (end1 <= start2) {
       i++;
     } 
     else if (end2 <= start1) {
-      j++; // 13n + 17
+      j++; 
     } 
     else {
       int start = max(start1, start2);
-      int end = min(end1, end2); // 15 18
+      int end = min(end1, end2); 
       if (end - start >= duration) {
         commonTimes.push_back(make_pair(start, end));
       }
@@ -94,23 +92,23 @@ int main() {
   vector<int> person1DailyAct = {timeToMinutes("9:00"), timeToMinutes("19:00")};
 
   vector<pair<int, int>> person2Schedule = {
-      {timeToMinutes("9:00"), timeToMinutes("10:30")},
-      {timeToMinutes("12:20"), timeToMinutes("14:30")},
+      {timeToMinutes("8:00"), timeToMinutes("10:30")},
+      {timeToMinutes("12:00"), timeToMinutes("14:30")},
       {timeToMinutes("14:00"), timeToMinutes("15:00")},
       {timeToMinutes("16:00"), timeToMinutes("17:00")}};
   vector<int> person2DailyAct = {timeToMinutes("9:00"), timeToMinutes("18:30")};
 
   int duration = 30;
 
-  // find common available times for the two people 
+  // find common available times for both people 
   vector<pair<int, int>> commonTimes =
       findCommonTimes(person1Schedule, person1DailyAct, person2Schedule, person2DailyAct, duration);
 
   // convert the common available times to time strings
-  vector<string> availableTimes;
+  vector<string> availableTime;
   for (int i = 0; i < commonTimes.size(); i++) 
   {
-    availableTimes.push_back("[" + minutesToTime(commonTimes[i].first) + " , " + minutesToTime(commonTimes[i].second) + "]");
+    availableTime.push_back("[" + minutesToTime(commonTimes[i].first) + " , " + minutesToTime(commonTimes[i].second) + "]");
   }
 
   // Open the output file for writing
@@ -120,12 +118,12 @@ int main() {
       return 1;
   }
 
-  if (availableTimes.empty()) {
+  if (availableTime.empty()) {
     outputFile << "No common available times found" << endl;
   } else {
     outputFile << "Common available times:" << endl;
-    for (int i = 0; i < availableTimes.size(); i++) {
-      outputFile << availableTimes[i] << endl;
+    for (int i = 0; i < availableTime.size(); i++) {
+      outputFile << availableTime[i] << endl;
     }
   }
 
